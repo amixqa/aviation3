@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
+}
+
+/* =========================
+   A4 LANDSCAPE
+========================= */
+
+.page {
+    width: 297mm;
+    height: 210mm;
+
+    background: white;
+
+    margin: 10mm auto;
+    padding: 18mm 22mm;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid #222;
+
+    page-break-after: always;
+}
+
+/* =========================
+   ОБЩИЕ ЭЛЕМЕНТЫ
+========================= */
+
+h1 {
+    font-size: 29px;
+    line-height: 1.25;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 29px;
+    color: #123d68;
+    border-bottom: 2px solid #123d68;
+    padding-bottom: 8px;
+    margin: 0 0 18px 0;
+}
+
+h3 {
+    font-size: 21px;
+    color: #123d68;
+    margin: 12px 0 8px;
+}
+
+p,
+li {
+    font-size: 18px;
+    line-height: 1.55;
+}
+
+p {
+    margin: 0 0 13px;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   ТИТУЛЬНИК
+========================= */
+
+.title-page {
+    text-align: center;
+    padding-top: 14mm;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.title-page h3 {
+    margin: 4px 0;
+    font-size: 22px;
+}
+
+.discipline {
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.title-page h1 {
+    max-width: 900px;
+    margin: 30px auto;
+    font-size: 31px;
+    color: #123d68;
+}
+
+.student {
+    text-align: left;
+    width: 700px;
+    max-width: 90%;
+    margin: 25px auto;
+}
+
+.student p {
+    margin-bottom: 8px;
+}
+
+.city {
+    margin-top: 25px;
+    font-size: 19px;
+}
+
+/* =========================
+   КОЛОНКИ
+========================= */
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 25px;
+    height: calc(100% - 65px);
+    align-items: center;
+}
+
+.two-column .text {
+    align-self: start;
+}
+
+.text {
+    text-align: justify;
+}
+
+/* =========================
+   ФОТО
+========================= */
+
+.large-photo {
+    display: block;
+    width: 100%;
+    max-height: 145mm;
+    object-fit: contain;
+    margin: auto;
+}
+
+.medium-photo {
+    display: block;
+    width: 210px;
+    max-height: 90mm;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.machine-photo {
+    display: block;
+    width: 100%;
+    max-height: 150mm;
+    object-fit: contain;
+    margin: auto;
+}
+
+.wide-photo {
+    display: block;
+    width: 70%;
+    height: 55mm;
+    object-fit: contain;
+    margin: 12px auto 0;
+}
+
+.image-column {
+    text-align: center;
+}
+
+/* =========================
+   4-СЛАЙД
+========================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.info-grid > div {
+    border: 1px solid #777;
+    padding: 12px;
+}
+
+.info-grid h3 {
+    margin-top: 0;
+    font-size: 19px;
+}
+
+.info-grid p {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* =========================
+   ДОКУМЕНТЫ
+========================= */
+
+.document-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    height: 140mm;
+}
+
+.document-grid > div {
+    text-align: center;
+}
+
+.document-grid img {
+    width: 100%;
+    height: 115mm;
+    object-fit: contain;
+}
+
+.document-grid p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.bottom-text {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* =========================
+   ДОСТИЖЕНИЯ
+========================= */
+
+.achievement-list {
+    margin-top: 15px;
+}
+
+.achievement-list p {
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.signature {
+    display: block;
+    width: 180px;
+    height: 60px;
+    object-fit: contain;
+    margin: 10px auto;
+}
+
+/* =========================
+   ЗАКЛЮЧЕНИЕ
+========================= */
+
+.big-text p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.conclusion {
+    margin-top: 15px;
+}
+
+.conclusion p {
+    font-size: 20px;
+    line-height: 1.65;
+}
+
+/* =========================
+   СПИСОК
+========================= */
+
+.sources-page ol {
+    margin-top: 25px;
+}
+
+.sources-page li {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+.final-line {
+    width: 70%;
+    height: 2px;
+    background: #123d68;
+    margin: 35px auto;
+}
+
+.thank-you {
+    color: #123d68;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   ПЕЧАТЬ
+========================= */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    html,
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        width: 297mm;
+        height: 210mm;
+
+        margin: 0;
+        border: none;
+
+        page-break-after: always;
+        break-after: page;
+
+        overflow: hidden;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .page:last-child {
+        page-break-after: auto;
+        break-after: auto;
+    }
+}
+.presentation-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #174b78;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 18px 0 12px;
+    text-transform: uppercase;
+}
